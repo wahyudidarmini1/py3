@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import requests,shutil,random,string,json,os,tempfile
+import unicodedata
 from libapi import Poll, Talk, channel
 from libapi.ttypes import *
 import requests,shutil,json,random,tempfile
@@ -39,9 +41,9 @@ class LINE:
     self.authToken = self.Talk.authToken
     self.cert = self.Talk.cert
     self._headers = {
-              'X-Line-Application': 'CHROMEOS\t1.4.17\tChrome_OS\t1', 
+              'X-Line-Application': 'IOSIPAD\t7.14.0\tiPhone OS\t10.12.0', 
               'X-Line-Access': self.authToken, 
-              'User-Agent': 'Line/1.4.17'
+              'User-Agent': 'Line/7.14.0'
    }
     self.Poll = Poll(self.authToken)
     self.channel = channel.Channel(self.authToken)
