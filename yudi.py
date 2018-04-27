@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
-import LINEPY
-from LINEPY import *
-from akad.ttypes import *
+#import LINEPY
+#from LINEPY import *
+from LINEPY.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep
 import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, wikipedia
@@ -10,27 +10,27 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import youtube_dl
 
-cl = LineClient(authToken='Es0tC3qZpJ9yAf2p9fze.4uWnRTJU51yT+/CjXTyHBG.9t2i0AJNoDGSG/wYv53WOj5LDKx4zt8hmcWepI+36T4=')
+cl = LINEPY(authToken='Es0tC3qZpJ9yAf2p9fze.4uWnRTJU51yT+/CjXTyHBG.9t2i0AJNoDGSG/wYv53WOj5LDKx4zt8hmcWepI+36T4=')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-ki = LineClient(authToken='EsGeLt0wGpw4lxVEkfrb.drkXjI9kC7gz45kx2rUb2W.YLMPgsy7VvNW7aqg81oOrFj6C4EK5ey61r+s7ZO7/5g=')
+ki = LINEPY(authToken='EsGeLt0wGpw4lxVEkfrb.drkXjI9kC7gz45kx2rUb2W.YLMPgsy7VvNW7aqg81oOrFj6C4EK5ey61r+s7ZO7/5g=')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-kk = LineClient(authToken='EsV4melT6DSiaPov2QT3.eXGEKA8y87MQtoFvPFGwuW.h0KZfk94tOhM4A8mOTHZOS0UOJruzBUpc4wmNElUvLY=')
+kk = LINEPY(authToken='EsV4melT6DSiaPov2QT3.eXGEKA8y87MQtoFvPFGwuW.h0KZfk94tOhM4A8mOTHZOS0UOJruzBUpc4wmNElUvLY=')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-kc = LineClient(authToken='EsgfDaaBRXtj06q4iRt8.1e8nOeP/17yuiWiheXA//a.szB6Mo80SA/ykNQxwf5/3TjkJxp5J6H7LIi5DLIeCxo=')
+kc = LINEPY(authToken='EsgfDaaBRXtj06q4iRt8.1e8nOeP/17yuiWiheXA//a.szB6Mo80SA/ykNQxwf5/3TjkJxp5J6H7LIi5DLIeCxo=')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-sw = LineClient(authToken='Es40yLFUTANU8lFvN2Lf.StMJ2yMSv7H5XrT17lGnZW.kEyscUBZhkTetrYq3H0q0SLXC21rYuzgIrMIeWDz+GA=')
+sw = LINEPY(authToken='Es40yLFUTANU8lFvN2Lf.StMJ2yMSv7H5XrT17lGnZW.kEyscUBZhkTetrYq3H0q0SLXC21rYuzgIrMIeWDz+GA=')
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
@@ -329,7 +329,7 @@ def help():
                   "™↔ " + key + "Broadcast:「Text」\n" + \
                   "™↔ " + key + "Setkey「New Key」\n" + \
                   "™↔ " + key + "Mykey\n" + \
-                  "™↔ " + key + "Resetkey\n" + \ 
+                 # "™↔ " + key + "Resetkey\n" + \ 
                   "\n ™[Selfbot Hiburan]™\n   Gunakan「 " + key + " 」di depannya\n\n" + \
                   "™↔ " + key + "ID line:「Id Line nya」\n" + \
                   "™↔ " + key + "Sholat:「Nama Kota」\n" + \
