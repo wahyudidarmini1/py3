@@ -496,9 +496,9 @@ class LINE:
 
       prof = self.getProfile()
 
-      print("===============[Vipro_Bot]================")
-      print("        Thanks for TCR and my friend")
-      print("===============[© By_Vipro]================")
+      print("===============[Yudi_Bot]================")
+      print("        Thanks for Jombang and my friend")
+      print("===============[© By_Yudi]================")
       print("mid -> " + prof.mid)
       print("name -> " + prof.displayName)
       print("authToken -> " + self.authToken)
